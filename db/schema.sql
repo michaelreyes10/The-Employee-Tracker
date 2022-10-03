@@ -1,5 +1,5 @@
 DROP DATABASE IF EXISTS the_employee_tracker;
-CREATE DATABASE IF EXISTS the_employee_tracker;
+CREATE DATABASE the_employee_tracker;
 USE the_employee_tracker;
 
 CREATE TABLE departments (
