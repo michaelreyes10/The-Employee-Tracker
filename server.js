@@ -31,7 +31,6 @@ function initPrompt() {
         })   
 };
 initPrompt();
-
 function promptMenu() {
     return inquirer.prompt([
         {
@@ -69,12 +68,8 @@ function promptMenu() {
         
     });    
 };
-
-
-
-
-
-function seeDepartments() { db.query({sql:'SELECT * FROM departments'}, (errors, results, fields) => {
+function seeDepartments() 
+{ db.query({sql:'SELECT * FROM departments'}, (errors, results, fields) => {
     if(errors) {console.log(errors.message)};
     console.table(results);
     promptMenu();
@@ -120,12 +115,12 @@ function createRole() {
     return inquirer.prompt([
                 {
                     type: 'input',
-                    title: 'New Role',
+                    name: 'New Role',
                     message: 'Add new role title'
                 
                 },
                 { type: 'number',
-                title: 'salary',
+                name: 'salary',
                 message: 'Input desired salary for new role'
             
                 },
@@ -203,7 +198,6 @@ function createEmployee() {
                 }
              });
 };
-   
 function editRole() {
     
     return inquirer.prompt([
